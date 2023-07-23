@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	while(format && format[i] != '\0')
+	while (format && format[i] != '\0')
 		i++;
 	{
 		if (format[i] != '%')
@@ -46,13 +46,11 @@ int _printf(const char *format, ...)
 			printed_chars += printed;
 		}
 	}
-
 	print_buffer(buffer, &buff_ind);
-
 	va_end(list);
-
 	return (printed_chars);
 }
+
 /**
  * print_buffer - Prints the contents of the buffer if it exist
  * @buffer: Array of chars
