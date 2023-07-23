@@ -3,13 +3,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib>
 
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
 /**
- * Flags to be used
- */
+  * Flags - to be used
+  */
 
 #define F_MINUS 1
 #define F_PLUS 2
@@ -29,8 +30,8 @@
  */
 struct fmt
 {
-	char fmt
-		int (*fn)(va_list, char[], int, int, int, int);
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 /**
  * typedef struct fmt fmt_t - Struct o
@@ -88,16 +89,29 @@ int print_reverse(va_list types, char buffer[]
 		int flags, int width, int precision, int size);
 
 /**
- * Function to print a string in printt_rot13string
+ * Function - to print a string in print_rot13string
+ *@types: handle variable argument lists
+ *@buffer: an array of characters
+ *@flags: used to pass any additional flags or options to the function,
+ *@width:  minimum width for formatting the output
+ *@precision: used to specify the precision of the output.
+ *@size: represents the size of the buffer
+ *Return: Always (0).
  */
-
 int print_rot13string(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /**
- * to handle the  width handler
+ *hand_write_char - to handle the width handler
+ *@c: character of char
+ *@buffer: an array of characters
+ *@flags: used to pass any additional flags
+ *@width: minimum width for formatting the output
+ *@precision: used to specify the precision of the output.
+ *@size: represents the size of the buffer
+ *Return: Always (0).
  */
-int handle_write_char(char c, char buffer[]
+int handle_write_char(char c, char buffer[],
 		int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
 		int flags, int width, int precision, int size);
@@ -111,16 +125,14 @@ int write_unsgnd(int is_negative, int ind,
 		int flags, int width, int precision, int size);
 
 /**
- * For Utils
+ *For Utils - functions used for utils
+ *@char: single character
+ *Return: Always (0)
  */
-
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
-
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
-/**
- * End main.h
- */
+
 #endif
