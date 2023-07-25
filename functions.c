@@ -1,7 +1,7 @@
 #include "main.h"
 
 /*handling conversion specifiers:c */
-
+i
 /**
   *print _char - prints char
   *@types: handle an arbitrary number of arguments.
@@ -103,4 +103,3 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
-
