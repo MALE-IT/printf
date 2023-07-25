@@ -3,11 +3,10 @@
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
-  *_printf - sends formatted output to stdout.
-  *@format: string that contains the text to be written to stdout
-  *Return: successful, the total number of characters
-  *	On failure, a negative number is returned.
-  */
+ * _printf - Printf function
+ * @format: format.
+ * Return: Printed chars.
+ */
 int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
