@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
  *get_size - parse a format string and extract the size information
