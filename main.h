@@ -32,17 +32,6 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
 /**
  * typedef struct fmt fmt_t - Struct op
@@ -55,7 +44,7 @@ typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
-int _putchar(char c);
+
 /****************** FUNCTIONS ******************/
 
 /* Funtions to print chars and strings */
